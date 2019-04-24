@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
+
 .main-content {
 	width: 900px;
 	margin: 0 auto;
@@ -228,7 +229,14 @@ width: 900px;
 	justify-content: space-evenly;
 }
 
-.info-box {
+@media screen and (max-width: 900px) {
+	.services-main {
+	  display: flex;
+	  flex-flow: column wrap;
+	}
+  }
+
+.services-main .info-box {
 	width: 45%;
 	border: 1px solid darkolivegreen;
 	margin: 10px 0px 10px 0px;
@@ -252,6 +260,12 @@ width: 900px;
 
 }
 
+@media screen and (max-width: 900px) {
+	.services-bottom-content {
+	  display: none;
+	}
+  }
+
 .services-bottom-content h3{
 	width: 47%;
 	margin: 20px 0px 20px 0px;
@@ -268,4 +282,32 @@ width: 900px;
 
 .services-info-img {
 	width: 47%;
+}
+
+
+
+
+/* styles for features.html */
+
+.features-main {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+}
+
+.features-main .info-box {
+	border: 1px solid black;
+	margin: 10px 0px 10px 0px;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+	height: 160px;
+	display: flex;
+	flex-flow: column nowrap;
+	transition: height 0.5s;
+
+}
+
+.features-main .info-box:hover {
+	height: 350px;
 }
